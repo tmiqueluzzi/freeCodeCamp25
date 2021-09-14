@@ -1,3 +1,4 @@
+#É possível criar mais trechos de livros e perguntar para o usuário qual a obra que ele deseja ajudar. Talvez eu volte aqui e faça isso mais tarde
 #Apresentação
 print('Abaixo um trecho (editado com a sua ajuda, do livro "Mais esperto que o Diabo", de Napoleon Hill.')
 
