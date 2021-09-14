@@ -23,7 +23,7 @@ contagem += 1
 while computador != usuario:
     if computador > usuario:
         time.sleep(0.5)
-        print(f'{computador} É muito alto? Ok. Vou tentar de novo.')
+        print(f'{computador} é muito alto? Ok. Vou tentar de novo.')
         limite_alto = computador
     elif computador < usuario:
         time.sleep(0.5)
@@ -32,4 +32,4 @@ while computador != usuario:
     computador = randint(limite_baixo, limite_alto)
     contagem += 1
 
-print(f'Consegui! Essa foi a minha {contagem}a tentativa.')
+print(f'Consegui na minha {contagem}a tentativa! Seu número era {usuario}')
