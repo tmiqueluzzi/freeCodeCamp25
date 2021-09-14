@@ -4,10 +4,12 @@ from random import randint
 aleatorio = randint(1, 100) #Computador escolhe um numero
 contador = 0 #contagem das tentativas
 
+#Ambientação (trash)
 print('-='*20)
 print('JOGO DA ADIVINHAÇÃO (com dicas)')
 print('-='*20,'\n')
-#Input escolha do usuario
+
+#Código
 usuario = int(input('Tente adivinhar o número sorteado entre 1 e 100! '))
 while True:
     if 0 < usuario < 100:
@@ -20,9 +22,5 @@ while True:
         else:
             print('Seu número está muito alto, tente algum mais baixo.')
     else:
-        print('Número inválido. Insira um valor entre 1 e 100.')
+        print('Asim você não vai muito longe... Insira um valor entre 1 e 100.')
     usuario = int(input('Próxima tentativa: '))
-#Mais pra cima ou mais pra baixo?
-
-
-#
