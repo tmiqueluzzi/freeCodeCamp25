@@ -4,7 +4,7 @@ import time
 #Variaveis
 contagem = 0
 limite_alto = 100
-limite_baixo = 0
+limite_baixo = 1
 
 #Ambientação
 print('~'*40)
@@ -13,7 +13,7 @@ print('~'*40)
 
 #Código
 usuario = int(input('Digite um número de 1 a 100 para testar a sorte do seu processador: '))
-if 0 > usuario  or usuario > 100:
+while 0 > usuario or usuario > 100:
     usuario = int(input('Número inválido. Selecione entre 1 e 100! '))
 
 time.sleep(0.5)
@@ -29,7 +29,7 @@ while computador != usuario:
         time.sleep(0.5)
         print(f'{computador} é muito baixo? Ok. Vou tentar de novo')
         limite_baixo = computador
-    computador = randint(limite_baixo, limite_alto)
+    computador = randint(limite_baixo+1, limite_alto-1)
     contagem += 1
 
-print(f'Consegui na minha {contagem}a tentativa! Seu número era {usuario}')
+print(f'Consegui na minha {contagem}ª tentativa! Seu número era {usuario}')
