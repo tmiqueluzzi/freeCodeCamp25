@@ -2,7 +2,7 @@
 FreeCodeCamp listou 25 exercícios de Python, que tentarei completar e postar aqui no GitHub como prática.
 
 1. Mad Libs
-  Insira palavras para alterar um trecho de livro. \n
+  Insira palavras para alterar um trecho de livro. 
   Trabalha comoncatenação de strings;\n
       #Falta colocar mais opções de trechos
   
