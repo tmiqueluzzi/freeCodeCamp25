@@ -2,12 +2,12 @@
 FreeCodeCamp listou 25 exercícios de Python, que tentarei completar e postar aqui no GitHub como prática.
 
 1. Mad Libs
-  Insira palavras para alterar um trecho de livro.
-  Trabalha comoncatenação de strings;
+  Insira palavras para alterar um trecho de livro. \n
+  Trabalha comoncatenação de strings;\n
       #Falta colocar mais opções de trechos
   
 2. Guess the Number - Computer
-  O computador salva um número e cabe a você tentar adivinhar.
+  O computador salva um número e cabe a você tentar adivinhar.\n
   Módulo random + condicionais.
   
 3. Guess the Number - User
