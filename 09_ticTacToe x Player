@@ -29,6 +29,7 @@ def display(campo):
 def jogar():
   campo = zerar_campo()
   jogadas = 0
+  print('Lembre que as colunas e linhas começam em 0!')
   while jogadas <=9 and verifica(campo)==0 :
     jogadas +=1 
     display(campo)
