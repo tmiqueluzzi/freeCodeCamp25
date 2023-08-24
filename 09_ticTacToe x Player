@@ -50,13 +50,13 @@ def jogar():
 def verifica(campo):
     for linhas in range(3):
         soma = campo[linhas][0] + campo[linhas][1] + campo[linhas][2]
-    if soma == 3 or soma == -3:
-        return 1
+        if soma == 3 or soma == -3:
+            return 1
   
     for colunas in range(3):
         soma = campo[0][colunas] + campo[1][colunas] + campo[2][colunas]
-    if soma == 3 or soma == -3:
-        return 1
+        if soma == 3 or soma == -3:
+            return 1
   
     diagonal1 = campo[0][0] + campo[1][1] + campo[2][2]
     diagonal2 = campo[0][2] + campo[1][1] + campo[2][0]
