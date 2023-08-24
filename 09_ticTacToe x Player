@@ -1,68 +1,67 @@
 def zerar_campo():
-  board = [[0,0,0],
+    board = [[0,0,0],
          [0,0,0],
          [0,0,0]] 
-  return board
+    return board
 
 def menu():
-  print('JOGO DA VELHA contra OUTRO JOGADOR')
-  continuar = 1
-  while continuar:
+    print('JOGO DA VELHA contra OUTRO JOGADOR')
     continuar = int(input('0. Sair \n1. Jogar\n'))
-    if continuar:
-      jogar()
+    if continuar==1:
+        jogar()
     else:
-      print('Saindo... Volte sempre :)')
+        print('Saindo... Volte sempre :)')
 
 def display(campo):
-  for linha in range(3):
-    for coluna in range(3):
-      if campo[linha][coluna] == 0:
-        print(' _ ', end = ' ')
-      elif campo[linha][coluna] == 1:
-        print(' X ', end = ' ')
-      elif campo[linha][coluna] ==-1:
-        print(' O ', end = ' ')
-    print('')
-  print('')
+    for linha in range(3):
+        for coluna in range(3):
+            if campo[linha][coluna] == 0:
+                print(' _ ', end = ' ')
+            elif campo[linha][coluna] == 1:
+                print(' X ', end = ' ')
+            elif campo[linha][coluna] ==-1:
+                print(' O ', end = ' ')
+        print('')
+        print('')
 
 def jogar():
-  campo = zerar_campo()
-  jogadas = 0
-  print('Lembre que as colunas e linhas começam em 0!')
-  while jogadas <=9 and verifica(campo)==0 :
-    jogadas +=1 
-    display(campo)
-    linha = int(input('Linha: '))
-    coluna = int(input('Coluna: '))
-    if campo[linha][coluna] != 0:
-      print('Jogada impossível. Casa já ocupada.')
-      jogadas -= 1
-    else:
-      if jogadas % 2 == 0:
-        campo[linha][coluna] = 1
-      else:
-        campo[linha][coluna] = -1
-    if verifica(campo):
-      display(campo)
-      print(f'Jogo acabou. Vitória jogador {jogadas % 2} depois de {jogadas} jogadas. ')
+    campo = zerar_campo()
+    jogadas = 0
+    print('Lembre que as colunas e linhas começam em 0!')
+    while jogadas <=9 and verifica(campo)==0 :
+        jogadas +=1 
+        display(campo)
+        print('~'*20)
+        linha = int(input('Linha: '))
+        coluna = int(input('Coluna: '))
+        print('~'*20)
+        if campo[linha][coluna] != 0:
+            print('Jogada impossível. Casa já ocupada.')
+            jogadas -= 1
+        else:
+            if jogadas % 2 == 0:
+                campo[linha][coluna] = 1
+            else:
+                campo[linha][coluna] = -1
+        if verifica(campo):
+            display(campo)
+            print(f'Jogo acabou. Vitória jogador {jogadas % 2} depois de {jogadas} jogadas. ')
 
 def verifica(campo):
-  for linhas in range(3):
-    soma = campo[linhas][0] + campo[linhas][1] + campo[linhas][2]
+    for linhas in range(3):
+        soma = campo[linhas][0] + campo[linhas][1] + campo[linhas][2]
     if soma == 3 or soma == -3:
-      return 1
+        return 1
   
-  for colunas in range(3):
-    soma = campo[0][colunas] + campo[1][colunas] + campo[2][colunas]
+    for colunas in range(3):
+        soma = campo[0][colunas] + campo[1][colunas] + campo[2][colunas]
     if soma == 3 or soma == -3:
-      return 1
+        return 1
   
-  diagonal1 = campo[0][0] + campo[1][1] + campo[2][2]
-  diagonal2 = campo[0][2] + campo[1][1] + campo[2][0]
-  if diagonal1 == 3 or diagonal1 == -3 or diagonal2 == 3 or diagonal2== -3:
-    return 1
-
-  return 0
+    diagonal1 = campo[0][0] + campo[1][1] + campo[2][2]
+    diagonal2 = campo[0][2] + campo[1][1] + campo[2][0]
+    if diagonal1 == 3 or diagonal1 == -3 or diagonal2 == 3 or diagonal2== -3:
+        return 1
+    return 0
 
 menu()
